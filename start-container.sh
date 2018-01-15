@@ -4,13 +4,15 @@
 N=${1:-3}
 
 
-# start hadoop master container
+# start hadoop master container ,9000,9001映射后方便eclipse连接docker里的hadoop
 sudo docker rm -f hadoop-master &> /dev/null
 echo "start hadoop-master container..."
 sudo docker run -itd \
                 --net=hadoop \
                 -p 50070:50070 \
                 -p 8088:8088 \
+		-p 9000:9000 \
+                -p 9001:9001 \
                 --name hadoop-master \
                 --hostname hadoop-master \
                 kiwenlau/hadoop:1.0 &> /dev/null
