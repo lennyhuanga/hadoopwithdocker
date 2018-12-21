@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y openssh-server openjdk-7-jdk wget
 # 升级vim -y的作用是在执行过程中询问yes or no 时选yes
 RUN apt-get remove -y vim-common && apt-get install -y vim
 # install hadoop 2.7.2
-RUN wget https://github.com/lennyhuanga/compile-hadoop/releases/download/2.7.2/hadoop-2.7.2.tar.gz && \
+RUN wget https://github.com/kiwenlau/compile-hadoop/releases/download/2.7.2/hadoop-2.7.2.tar.gz && \
     tar -xzvf hadoop-2.7.2.tar.gz && \
     mv hadoop-2.7.2 /usr/local/hadoop && \
     rm hadoop-2.7.2.tar.gz
