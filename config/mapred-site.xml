@@ -4,4 +4,13 @@
         <name>mapreduce.framework.name</name>
         <value>yarn</value>
     </property>
+     <property>
+         <name>mapreduce.map.speculative</name>
+         <value>false</value>
+    </property>
+   <property>
+         <name>mapreduce.reduce.speculative</name>
+        <value>false</value>
+   </property>
+
 </configuration>
